@@ -59,7 +59,7 @@ public class ItemController1 implements org.springframework.web.servlet.mvc.Cont
 		modelAndView.addObject("itemsList",itemsList);
 		
 		//÷∏∂® ”Õº
-		//  http://localhost:8080/springmvc01//queryItems.action
+		//  http://localhost:8080/springmvc01/queryItems.action
 		modelAndView.setViewName("/WEB-INF/jsp/items/itemsList.jsp");
 		
 		return modelAndView;

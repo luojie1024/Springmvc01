@@ -14,11 +14,28 @@
 		http://www.springframework.org/schema/tx/spring-tx-3.2.xsd ">
 		
 <!--     配置Handler -->
-<bean name="/queryItems.action" class="cn.joahluo.ssm.controller.ItemController1"></bean>
+<bean name="/queryItems_test.action" class="cn.joahluo.ssm.controller.ItemController1"></bean>
+<!-- <bean name="/queryItems.action" class="cn.joahluo.ssm.controller.ItemController2"></bean> -->
+
+
+<!--注解映射器 -->
+<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"/>
+
+<!--注解适配器 -->
+<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"/> 
+
+
+<!-- 单一部署URL-->
+<bean class="cn.joahluo.ssm.controller.ItemController"/>
+<!-- !!!报错组件扫描 controller、service-->
+<!-- <context:component-scan base-package="cn.joahluo.ssm.controller"></context:component-scan> -->
+
+
+
+
 <!--处理器映射器 -->
 <bean
 		class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" />
-
 
 <!--处理器适配器 -->
 <bean		
@@ -26,5 +43,6 @@
     
 <!--视图解析器 -->
 <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"></bean>
+
 
 </beans>
